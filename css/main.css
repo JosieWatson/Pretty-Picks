@@ -18,3 +18,20 @@
   border-color: grey;
   text-shadow: 0px 0px 0px #000;
 }
+
+.navbar-brand-main {
+  display: inline-block;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
+  background-color: rgba(188, 212, 224, 1);
+  color: rgba(81, 83, 108, 1);
+}
+
+.bg-custom {
+background-color: rgba(188, 212, 224, 1);
+color: rgba(81, 83, 108, 1);
+}
