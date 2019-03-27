@@ -8,8 +8,8 @@
   padding: 2rem 1rem;
   margin-bottom: 2rem;
   border-radius: 0.3rem;
-  text-shadow: 2px 2px 0px #000;
   color: white;
+  background-size: cover;
 }
 
 .btn-primary-main {
@@ -41,14 +41,16 @@ element.style {
     height: 500px;
 }
 
-.marketing .col-lg-4 {
-  margin-bottom: 1.5rem;
-  text-align: center;
+.footer {
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  line-height: inherit;
+  white-space: nowrap;
+  background-color: rgba(188, 212, 224, 1);
+  color: rgba(81, 83, 108, 1);
 }
-.marketing h2 {
-  font-weight: normal;
-}
-.marketing .col-lg-4 p {
-  margin-right: .75rem;
-  margin-left: .75rem;
+
+.list-footer {
+  padding-left: 0;
+  list-style: none;
 }
