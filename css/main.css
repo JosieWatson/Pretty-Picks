@@ -36,17 +36,6 @@ background-color: rgba(188, 212, 224, 1);
 color: rgba(81, 83, 108, 1);
 }
 
-.featurette-divider {
-  margin: 5rem 0;
-}
-
-.featurette-heading {
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -.05rem;
-  font-size: 50px;
-}
-
 element.style {
     width: 500px;
     height: 500px;
