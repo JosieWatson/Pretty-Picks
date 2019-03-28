@@ -1,1 +1,1 @@
-web: python tweet.py $PORT
+web: python contract.py $PORT
