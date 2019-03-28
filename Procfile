@@ -1,1 +1,1 @@
-web: python contract.py $PORT
+web: python contact.py $PORT
