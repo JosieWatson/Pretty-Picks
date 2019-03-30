@@ -1,3 +1,4 @@
+from flask import Flask
 from google_images_search import GoogleImagesSearch
 import os
 
