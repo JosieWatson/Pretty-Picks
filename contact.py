@@ -1,8 +1,5 @@
 from flask import Flask, render_template, request, redirect
 
-API_KEY = "dd9d7783ca1e37dfbe450e16dbab28de-de7062c6-65493037"
-DOMAIN_NAME = "sandboxd172cd47aada453fb367e2d8bd137e31.mailgun.org"
-
 app = Flask("enquiries")
 
 @app.route("/")
