@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect
 import os
 
 app = Flask("enquiries")
+port = int(os.environ.get("PORT", 5000))
 
 @app.route("/")
 def main():
@@ -14,8 +15,7 @@ def signup():
     print("The email address is '" + email + "', enquiry is '" + enquiry + "'")
     return redirect("/")
 
-app.run(debug=True)
-
+app.run(host='0.0.0.0', port=port, debug=True)
 
 #Custom search - if we can get it to work!
 #from flask import Flask
