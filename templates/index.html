@@ -40,21 +40,43 @@
     <div class="jumbotron-main" style="background-image: url(../static/images/main-background.jpg)" background-size: 100%;>
       <div class="row">
         <div class="col-md-7">
-      </div>
-          <div class="col-md-5">
-            <br>
-            <h1 class="display-4">Pretty Picks</h1>
-            <br>
-            <p class="lead">Shopping can be disheartening and difficult, especially when your style is "out of fashion".
-            <br>
-            <br>Pretty Picks combines your fashion sense with online trends to recommend the best looks - just for you.</p>
-            <br>
-            <br>
-            <p>Want to find your new favourites?</p>
-            <a class="btn btn-primary-main btn-lg" href="https://pretty-picks.herokuapp.com/dressme" role="button">Dress me!</a>
-          </div>
+        </div>
+        <div class="col-md-5">
+          <br>
+          <h1 class="display-4">Pretty Picks</h1>
+          <br>
+          <p class="lead">Shopping can be disheartening and difficult, especially when your style is "out of fashion".
+          <br>
+          <br>Pretty Picks combines your fashion sense with online trends to recommend the best looks - just for you.</p>
+          <br>
+          <br>
+          <p>Want to find your new favourites?</p>
+          <a class="btn btn-primary-main btn-lg" href="https://pretty-picks.herokuapp.com/dressme" role="button">Dress me!</a>
         </div>
       </div>
+    </div>
+
+    <div class="jumbotron-main" style="background-image: url(../static/images/weatherappbg.jpg)" background-size: 100%;>
+      <div class="row">
+        <div class="col-md-5">
+          <h1 class="display-4">What's your look today?</h1>
+          <br>
+          <p class="lead">Not sure how the weather's looking?
+          <br>
+          <br>Tell us which city you're in and we'll tell you what's up!</p>
+          <br>
+          <p>Make sure to use the correct spelling.</p>
+          <br>
+          <form action="/OOtD" method="post">
+            <input type="text" class="form-control" name="location" placeholder="Where you at?"></input>
+            <br>
+            <input type="submit" value="Submit" class="btn btn-secondary-outline btn-sm"></input>
+          </form>
+        </div>
+        <div class="col-md-7">
+        </div>
+      </div>
+    </div>
 
 <!--Footer -->
       <footer class="footer">
@@ -91,16 +113,16 @@
                   <div class="col-md-5">
                       <br>
                       <br>
-                        <form action="/signup" method="post">
-                          <fieldset class="form-group">
-                              <input type="text" class="form-control" name="email" placeholder="Enter email"></input>
-                          </fieldset>
-                          <fieldset class="form-group">
-                              <textarea type="text" class="form-control" name="enquiry" placeholder="Message"></textarea>
-                          </fieldset>
-                          <fieldset class="form-group text-xs-right">
-                              <input type="submit" value="Submit" class="btn btn-secondary-outline btn-lg"></input>
-                          </fieldset>
+                      <form action="/signup" method="post">
+                        <fieldset class="form-group">
+                            <input type="text" class="form-control" name="email" placeholder="Enter email"></input>
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <textarea type="text" class="form-control" name="enquiry" placeholder="Message"></textarea>
+                        </fieldset>
+                        <fieldset class="form-group text-xs-right">
+                            <input type="submit" value="Submit" class="btn btn-secondary-outline btn-lg"></input>
+                        </fieldset>
                       </form>
                   </div>
               </div>

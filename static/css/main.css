@@ -7,9 +7,14 @@
 .jumbotron-main {
   padding: 2rem 1rem;
   margin-bottom: 2rem;
-  border-radius: 0.3rem;
   color: white;
   background-size: cover;
+}
+
+.jumbotron-temperature {
+  color: white;
+  background-size: cover;
+  text-align: center;
 }
 
 .btn-primary-main {
@@ -42,7 +47,6 @@ element.style {
 }
 
 .footer {
-  padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
   line-height: inherit;
   white-space: nowrap;
