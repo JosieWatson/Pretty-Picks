@@ -12,7 +12,8 @@ def main():
 @app.route("/signup", methods = ["POST"])
 def signup():
     email = request.form["email"]
-    print("The email address is '" + email + "'")
+    enquiry = request.form["enquiry"]
+    print("The email address is '" + email + "', enquiry is '" + enquiry + "'")
     return redirect("/")
 
 app.run(debug=True)
