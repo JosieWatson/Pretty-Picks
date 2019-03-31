@@ -82,17 +82,17 @@
                 <div class="col-md-5">
                     <br>
                     <br>
-                    <form>
-                        <fieldset class="form-group">
-                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                        </fieldset>
-                        <fieldset class="form-group">
-                            <textarea class="form-control" id="exampleMessage" placeholder="Message"></textarea>
-                        </fieldset>
-                        <fieldset class="form-group text-xs-right">
-                            <button type="button" class="btn btn-secondary-outline btn-lg">Send</button>
-                        </fieldset>
-                    </form>
+                    <form action="/signup" method="post">
+                      <fieldset class="form-group">
+                          <input type="text" class="form-control" name="email" placeholder="Enter email"></input>
+                      </fieldset>
+                      <fieldset class="form-group">
+                          <textarea type="text" class="form-control" name="enquiry" placeholder="Message"></textarea>
+                      </fieldset>
+                      <fieldset class="form-group text-xs-right">
+                          <input type="submit" value="Submit" class="btn btn-secondary-outline btn-lg"></input>
+                      </fieldset>
+                  </form>
                 </div>
             </div>
         </div>
