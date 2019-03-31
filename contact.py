@@ -8,7 +8,7 @@ port = int(os.environ.get("PORT", 5000))
 def main():
     return render_template("index.html")
 
-@app.route("/dressme.html")
+@app.route("/dressme")
 def dressme():
     return render_template("dressme.html")
 
