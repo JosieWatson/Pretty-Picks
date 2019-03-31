@@ -6,7 +6,7 @@ port = int(os.environ.get("PORT", 5000))
 
 @app.route("/")
 def main():
-    return render_template("index.html")
+    return render_template("index.html", "dressme.html")
 
 @app.route("/signup", methods = ["POST"])
 def signup():
