@@ -38,10 +38,23 @@
       <br>
       <br>
       <br>
+      <div class="row">
+        <div class="col-md-5">
+          <gcse:searchbox-only newWindow-"false" queryParameterName="What screams 'YOU'"></gcse:searchbox-only>
+        </div>
+      </div>
     </div>
 
-    <div class="jumbotron-main" style="background-image: url(../static/images/feature1.jpg)" background-size:100%;>
+    <form action="/dressmeresults" method="post">
+      <input type="text" class="form-control" name="lookbook" placeholder="What screams 'YOU'?"></input>
+      <br>
+      <input type="submit" value="Submit" class="btn btn-secondary-outline btn-sm"></input>
+    </form>
 
+    <div class="jumbotron-main">
+      {% if response %}
+      <img src="{{ lookbook_image }}" alt="Your new look?">
+      {% endif %}
     </div>
 
     <!--Footer-->
@@ -91,7 +104,6 @@
             </div>
         </div>
     </footer>
-
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

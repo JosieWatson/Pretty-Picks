@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, redirect
+from google_images_search import GoogleImagesSearch
 import requests
 import os
 
@@ -40,11 +41,29 @@ def weather():
     else:
         return render_template("inside.html")
 
+@app.route("/dressmeresults", methods = ["POST"])
+def dressmeresults():
+    lookbook = request.form["lookbook"]
+    gis = GoogleImagesSearch('AIzaSyAxAlmyAIIHJbzOTB3O8w9IM5jekCu30Sg', '004019977071585379181:a_pfwumdely')
+    endpoint = 'https://cse.google.com/cse?cx=004019977071585379181:a_pfwumdely'
+    _search_params = {
+        'q': lookbook,
+        'num': 1,
+        'safe': 'high',
+        'fileType': 'jpg|gif|png',
+        'imgType': 'photo',
+        'imgSize': 'medium',
+        'searchType': 'image',
+        }
+    response = requests.get(endpoint, params=_search_params)
+    picture = response.json()
+    return render_template("dressme.html", lookbook_image = picture)
+
 
 #cse_id = os.environ.get("cse_id", None)
 #api_key = os.environ.get("api_key", None)
 
-#gis = GoogleImagesSearch('api_key', 'cse_id')
+#
 
 #_search_params = {
 #    'q': '...',
@@ -58,5 +77,5 @@ def weather():
 #}
 
 #gis.search({'q': 'boho', 'num': 3})
-
+#    gis.search({'q': lookbook, 'num': 50})
 app.run(host='0.0.0.0', port=port, debug=True)
