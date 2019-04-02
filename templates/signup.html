@@ -26,38 +26,27 @@
       </div>
     </nav>
     <!--Feature-->
-    <div class="jumbotron-main" style="background-image: url(../static/images/feature1.jpg)" background-size: 100%;>
-      <br>
-      <br>
-      <br>
-      <h1 class="display-4">How's it cookin' good lookin'?</h1>
-      <br>
-      <p class="lead">If you could choose one word to summarise your style, or even your personality in one word - what would it be?
-      <br>
-      <br>Keep that word in mind, you'll need it soon!</p>
-      <br>
-      <br>
-      <br>
+    <div class="contact-pg">
       <div class="row">
-        <div class="col-md-5">
-          <gcse:searchbox-only newWindow-"false" queryParameterName="What screams 'YOU'"></gcse:searchbox-only>
+        <div class="col-md-6">
+          <br>
+          <br>
+          <h1>Thanks for getting in touch!</h1>
+          <br>
+          <p class="lead">We try to respond to all e-mails in a timely fashion.
+          <br>
+          <br>Thank you for your patience and support!</p>
+          <br>
+          <br>
+          <a class="btn btn-primary-main btn-lg" href="https://pretty-picks.herokuapp.com/" role="button">Home</a>
+          <br>
+        </div>
+      <div class="col-md-6">
+        <img class="contact-pg" src="../static/images/inside.jpg" size: 100%; >
         </div>
       </div>
     </div>
-
-    <div class="jumbotron-main">
-      <form action="/dressmeresults" method="post">
-        <input type="text" class="form-control" name="lookbook" placeholder="What screams 'YOU'?"></input>
-        <br>
-        <input type="submit" value="Submit" class="btn btn-secondary-outline btn-sm"></input>
-      </form>
-      {% if response %}
-      <ul>
-        <li><img src="{{ lookbook_image }}" alt="Your new look?"></li>
-      </ul>
-      {% endif %}
-    </div>
-
+  </div>
     <!--Footer-->
     <footer class="footer">
         <div class="container">
@@ -75,7 +64,7 @@
                           <a class="nav-link" href="https://pretty-picks.herokuapp.com/">Home</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="https://pretty-picks.herokuapp.com/dressme">Dress me<span class="sr-only">(current)</span></a>
+                          <a class="nav-link" href="https://pretty-picks.herokuapp.com/dressme">Dress me</a>
                         </li>
                       </ul>
                     </div>
@@ -105,6 +94,7 @@
             </div>
         </div>
     </footer>
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

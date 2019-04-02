@@ -20,7 +20,7 @@ def signup():
     email = request.form["email"]
     enquiry = request.form["enquiry"]
     print("The email address is '" + email + "', enquiry is '" + enquiry + "'")
-    return redirect("/")
+    return render_template("signup.html")
 
 @app.route("/OOtD", methods = ["POST"])
 def weather():
@@ -41,29 +41,30 @@ def weather():
     else:
         return render_template("inside.html")
 
-@app.route("/dressmeresults", methods = ["POST"])
+@app.route("/dressmeresults", methods = ["GET", "POST"])
 def dressmeresults():
     lookbook = request.form["lookbook"]
-    gis = GoogleImagesSearch('AIzaSyAxAlmyAIIHJbzOTB3O8w9IM5jekCu30Sg', '004019977071585379181:a_pfwumdely')
-    endpoint = 'https://cse.google.com/cse?cx=004019977071585379181:a_pfwumdely'
+    gis = GoogleImagesSearch("AIzaSyAxAlmyAIIHJbzOTB3O8w9IM5jekCu30Sg", "004019977071585379181:a_pfwumdely")
+    endpoint = "https://cse.google.com/cse?cx=004019977071585379181:a_pfwumdely"
     _search_params = {
         'q': lookbook,
         'num': 1,
         'safe': 'high',
-        'fileType': 'jpg|gif|png',
-        'imgType': 'photo',
-        'imgSize': 'medium',
         'searchType': 'image',
+        'cx': '004019977071585379181:a_pfwumdely',
+        'appid': 'AIzaSyAxAlmyAIIHJbzOTB3O8w9IM5jekCu30Sg'
         }
     response = requests.get(endpoint, params=_search_params)
-    picture = response.json()
+    data = response.json()
+    picture = data["items"]["image"]
     return render_template("dressme.html", lookbook_image = picture)
 
 
 #cse_id = os.environ.get("cse_id", None)
 #api_key = os.environ.get("api_key", None)
 
-#
+#response = gis.search(_search_params={'q', 'num'})
+#picture = response.gis()
 
 #_search_params = {
 #    'q': '...',
