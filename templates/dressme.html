@@ -30,11 +30,15 @@
       <br>
       <br>
       <br>
+      <br>
+      <br>
       <h1 class="display-4">How's it cookin' good lookin'?</h1>
       <br>
       <p class="lead">If you could choose one word to summarise your style, or even your personality in one word - what would it be?
       <br>
       <br>Keep that word in mind, you'll need it soon!</p>
+      <br>
+      <br>
       <br>
       <br>
       <br>
@@ -45,11 +49,24 @@
       </div>
     </div>
 
-    <div class="jumbotron-main">
+    <div class="jumbotron-white">
       <form action="/dressmeresults" method="post">
-        <input type="text" class="form-control" name="lookbook" placeholder="What screams 'YOU'?"></input>
+        <div class="row">
+          <div class="col-md-2">
+          </div>
+          <div class="col-md-8">
+            <br>
+            <br>
+            <input type="text" class="form-control" name="lookbook" placeholder="What screams 'YOU'?"></input>
+            <br>
+            <br>
+            <input type="submit" value="Submit" class="btn btn-secondary-outline btn-md"></input>
+            <br>
+          </div>
+          <div class="col-md-2">
+          </div>
+        </div>
         <br>
-        <input type="submit" value="Submit" class="btn btn-secondary-outline btn-sm"></input>
       </form>
       {% if response %}
       <ul>
